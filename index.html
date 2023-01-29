@@ -5,11 +5,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saerom Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Saerom's Portfolio</title>
 </head>
 
 <body>
+  <header>
+    <h1 class="hidden">Saerom's Portfolio</h1>
+    <div id="gnb">
+      <a class="tap-btn"><span></span></a>
 
+    </div>
+    <div class="tap-menu"></div>
+  </header>
+
+  <div class="profile">
+    <figure><img src="" alt=""></figure>
+    <h1>Sarom Kim</h1>
+    <h2>FRONT-END DEVELOPER</h2>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <section class="intro">
+        <h1>안녕하세요! <strong>신입 프론트엔드 개발자 김새롬</strong>입니다.</h1>
+        <h2>배운 지식을 활용하여 아이디어를 구현해 나가며 성장하는 과정이 재밌습니다.</h2>
+        <h2>항상 열린 시각으로 숲을 보려는 노력을 하겠습니다.</h2>
+        <a href="#">My resume</a>
+      </section>
+      <section class="portfolio">
+        <div class="skills">
+          <p>skills</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SCSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </div>
+        <div class="pf-html">
+          <p>HTML page : <a href="">Web Page</a> / <a href="">Repository</a> / <a href="">Guide</a></p>
+          <p>공유오피스 concept의 웹사이트입니다.</p>
+          <p>html, scss, js로 구현하였습니다.</p>
+        </div>
+        <div class="pf-react">
+          <span>React page : <a href="">Web Page</a> / <a href="">Repository</a> / <a href="">Guide</a></span>
+          <p>html, scss로 구현한 웹사이트를 react를 사용하여 동일한 디자인으로 구현하였습니다.</p>
+          <p>또한, Redux-Toolkit으로 전역데이터를 관리합니다.</p>
+        </div>
+      </section>
+    </div>
+
+  </div>
 </body>
+<script>
+  const btn_call = document.querySelector('.tap-btn');
+  const tap_menu = document.querySelector('.tap-menu');
+
+  btn_call.onclick = (e) => {
+    e.preventDefault();
+    btn_call.classList.toggle('on');
+    tap_menu.classList.toggle('on');
+  };
+
+</script>
 
 </html>

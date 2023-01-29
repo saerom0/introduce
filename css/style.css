@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  text-indent: -9999px;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  position: relative;
+  float: left;
+  width: 50px;
+  height: 100vh;
+  background: #111;
+}
+header #gnb {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  background: rgb(17, 230, 159);
+  top: 3%;
+}
+header #gnb .tap-btn {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: 50%;
+  top: 25%;
+  left: 20%;
+}
+header #gnb .tap-btn::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+header #gnb .tap-btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+header #gnb .tap-btn span {
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background: #000;
+  top: 50%;
+  left: 20%;
+  margin-top: -1px;
+  transition: 0.5s;
+  z-index: 2;
+}
+header #gnb .tap-btn.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+header #gnb .tap-btn.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+header #gnb .tap-btn.on span {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+header .tap-menu {
+  display: block;
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -350px;
+  z-index: 2;
+  transition: 0.5s;
+  background: #555;
+  opacity: 0;
+}
+header .tap-menu.on {
+  left: 50px;
+  opacity: 1;
+}
+
+.profile {
+  position: relative;
+  float: left;
+  width: 350px;
+  height: 100vh;
+  background: #333;
+}
+.profile figure {
+  width: 310px;
+  height: 310px;
+  margin: 10% 20px 50%;
+  border-radius: 50%;
+  background: #fff;
+}
+.profile h1 {
+  text-align: center;
+  color: #fff;
+  font: 30px/2 "arial";
+}
+.profile h2 {
+  text-align: center;
+  color: rgb(18, 199, 138);
+  font: 15px/1.5 "arial";
+}
+
+.content {
+  position: relative;
+  float: left;
+  background: #111;
+  width: calc(100% - 400px);
+  height: 100vh;
+}
+.content .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+  color: aliceblue;
+}
+.content .container .intro {
+  position: relative;
+  padding-bottom: 30px;
+}
+.content .container .intro h1 {
+  font: 25px/1 "arial";
+}
+.content .container .intro h1 strong {
+  font: 35px/1.5 "arial";
+}
+.content .container .intro h2 {
+  font: 25px/1.2 "arial";
+}
+.content .container .intro a {
+  display: block;
+  font: 20px/2 "arial";
+  color: rgb(17, 230, 159);
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.content .container .intro a:hover {
+  transform: translateX(10px);
+}
+.content .container .intro::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background: #777;
+}
+.content .container .portfolio {
+  position: relative;
+}
+.content .container .portfolio .skills {
+  float: left;
+  width: 30%;
+  height: 100%;
+  padding: 30px;
+  border-right: 1px solid #777;
+}
+.content .container .portfolio .pf-html {
+  float: left;
+  width: 60%;
+}
+.content .container .portfolio .pf-html p {
+  color: #fff;
+}
+.content .container .portfolio .pf-react {
+  float: left;
+  width: 60%;
+}
+.content .container .portfolio .pf-react p {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
