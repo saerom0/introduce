@@ -18,10 +18,6 @@ a {
   text-indent: -9999px;
 }
 
-body {
-  position: relative;
-}
-
 header {
   position: relative;
   float: left;
@@ -29,7 +25,7 @@ header {
   height: 100vh;
   background: #111;
 }
-header #gnb {
+header .gnb {
   position: relative;
   width: 100%;
   height: 50px;
@@ -37,7 +33,7 @@ header #gnb {
   background: rgb(17, 230, 159);
   top: 3%;
 }
-header #gnb .tap-btn {
+header .gnb .tap-btn {
   display: block;
   position: relative;
   width: 60%;
@@ -45,7 +41,7 @@ header #gnb .tap-btn {
   top: 25%;
   left: 20%;
 }
-header #gnb .tap-btn::before {
+header .gnb .tap-btn::before {
   content: "";
   display: block;
   width: 100%;
@@ -56,7 +52,7 @@ header #gnb .tap-btn::before {
   background: #000;
   transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
-header #gnb .tap-btn::after {
+header .gnb .tap-btn::after {
   content: "";
   display: block;
   width: 100%;
@@ -67,7 +63,7 @@ header #gnb .tap-btn::after {
   background: #000;
   transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
-header #gnb .tap-btn span {
+header .gnb .tap-btn span {
   display: block;
   position: absolute;
   width: 60%;
@@ -79,17 +75,17 @@ header #gnb .tap-btn span {
   transition: 0.5s;
   z-index: 2;
 }
-header #gnb .tap-btn.on::before {
+header .gnb .tap-btn.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-header #gnb .tap-btn.on::after {
+header .gnb .tap-btn.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-header #gnb .tap-btn.on span {
+header .gnb .tap-btn.on span {
   transform: translateX(-100%);
   opacity: 0;
 }
@@ -105,9 +101,54 @@ header .tap-menu {
   background: #555;
   opacity: 0;
 }
+header .tap-menu section {
+  margin: 50px auto;
+  text-align: center;
+}
 header .tap-menu.on {
   left: 50px;
   opacity: 1;
+}
+header .tap-menu h2 {
+  font: 30px/1 "arial";
+  margin-bottom: 50px;
+  color: #fff;
+}
+header .tap-menu h2::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 3px;
+  margin-left: 110px;
+  background: #fff;
+}
+header .tap-menu .about,
+header .tap-menu .contact,
+header .tap-menu .cert {
+  color: #fff;
+  margin-bottom: 50px;
+}
+header .tap-menu .about h3,
+header .tap-menu .contact h3,
+header .tap-menu .cert h3 {
+  margin-bottom: 20px;
+  color: rgb(17, 230, 159);
+}
+header .tap-menu .about p,
+header .tap-menu .contact p,
+header .tap-menu .cert p {
+  margin-bottom: 10px;
+}
+header .tap-menu .about p i,
+header .tap-menu .contact p i,
+header .tap-menu .cert p i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+header .tap-menu .about p a,
+header .tap-menu .contact p a,
+header .tap-menu .cert p a {
+  color: #fff;
 }
 
 .profile {
@@ -186,24 +227,51 @@ header .tap-menu.on {
 }
 .content .container .portfolio .skills {
   float: left;
-  width: 30%;
+  width: 25%;
   height: 100%;
-  padding: 30px;
+  margin: 30px;
   border-right: 1px solid #777;
 }
-.content .container .portfolio .pf-html {
+.content .container .portfolio .skills h2 {
+  font: 30px/1.5 "arial";
+  margin-bottom: 30px;
+}
+.content .container .portfolio .skills ul li {
+  font: 20px/35px "arial";
+  margin-bottom: 20px;
+}
+.content .container .portfolio .skills ul li i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+.content .container .portfolio .pf-version {
   float: left;
-  width: 60%;
+  width: 50%;
 }
-.content .container .portfolio .pf-html p {
+.content .container .portfolio .pf-version h2 {
+  font: 30px/1.5 "arial";
+  margin: 30px;
+}
+.content .container .portfolio .pf-version .pf-html,
+.content .container .portfolio .pf-version .pf-react {
+  margin: 30px;
+}
+.content .container .portfolio .pf-version .pf-html p,
+.content .container .portfolio .pf-version .pf-react p {
   color: #fff;
+  margin-bottom: 10px;
 }
-.content .container .portfolio .pf-react {
-  float: left;
-  width: 60%;
+.content .container .portfolio .pf-version .pf-html p a,
+.content .container .portfolio .pf-version .pf-react p a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #000;
+  background: #fff;
+  border-radius: 20px;
 }
-.content .container .portfolio .pf-react p {
-  color: #fff;
+.content .container .portfolio .pf-version .pf-html {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #777;
 }
 
 /*# sourceMappingURL=style.css.map */
